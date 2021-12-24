@@ -1,5 +1,5 @@
 
-name: 'hamilton'
+name: 'dbt'
 version: '0.1'
 profile: 'postgres'
 config-version: 2
