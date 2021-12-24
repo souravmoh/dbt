@@ -46,4 +46,24 @@
         else "INCOMPLETE"
       end as calleventtype
    from bbg;
+   
+   /* with bbg as (
+
+    select * from {{ ref('stg_bbg') }}
+
+),
+hamilton as (
+select * from {{ref('stg_hamilton')}}
+
+),
+final as ( select ISSUE_PX, PCS_QUOTE_TYP,
+        case
+            when (ISSUE_PX is not null and PCS_QUOTE_TYP==2) then 100-ISSUE_PX
+            else ISSUE_PX
+        end as OfferPrice
+    from bbg
+    )
+ select * from final
+ */
+ 
 
