@@ -1,7 +1,7 @@
 
 name: 'transform'
 version: '0.1'
-profile: 'postgres'
+profile: 'SampleDB'
 config-version: 2
 
 source-paths: ["Models"]
