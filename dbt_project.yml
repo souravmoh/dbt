@@ -4,7 +4,7 @@ version: '0.1'
 profile: 'postgres'
 config-version: 2
 
-source-paths: ["models"]
+source-paths: ["Models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
@@ -17,7 +17,7 @@ clean-targets:
     - "logs"
 
 models:
-  jaffle_shop:
+  dbt:
       materialized: table
       staging:
         materialized: view
