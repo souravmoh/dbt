@@ -31,7 +31,19 @@ select TICKER, PAR_AMT, MIN_INCREMENT,
            else MIN_INCREMENT
        end as RoundLotSize
      from bbg;
-
+select PAR_AMT,PCT_PAR_QUOTED,
+       case
+         when PAR_AMT is not null then PAR_AMT
+         when PCT_PAR_QUOTED=="N" then 1
+         when PCT_PAR_QUOTED=="Y" then 100
+       end as NominalValueOfUnit
+     from bbg
+select CALLED,
+      case
+        when CALLED=="Y" then "FULLY"
+        else "INCOMPLETE"
+      end as calleventtype
+   from bbg
 
     )
  select * from final
