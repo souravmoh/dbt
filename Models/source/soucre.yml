@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: postgres
+    database: destination
+    tables:
+      - name: finalop
+      - name: finalop_good
+      - name: final_lse
+      - name: final_bo
