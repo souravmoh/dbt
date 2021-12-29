@@ -1,13 +1,4 @@
-with source as (
+select
+  *
 
-
-
-select * from {{ ref('Hamilton') }}
-
-
-
-)
-
-
-
-select * from source
+from {{ source('postgres', 'finalop_good') }}
