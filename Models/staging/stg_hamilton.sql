@@ -1,4 +1,4 @@
 select
   *
 
-from {{ source('postgres', 'finalop_good') }}
+from destination.public.finalop_good
