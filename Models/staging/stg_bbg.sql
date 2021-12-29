@@ -1,3 +1,3 @@
 select
   *
-from {{ source('postgres', 'final_bo') }}
+from destination.public.final_bo
