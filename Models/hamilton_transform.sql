@@ -1,55 +1,45 @@
-select BBG_UNIQUE_CODE,TICKER,CPN,MATURITY,SERIES,SHORT_NAME,ISSUER_INDUnitedStateOfAmericaTRY,
-MARKET_SECTOR_DES,CPN_FREQ,CPN_TYP,MTY_TYP,caLC_TYP_DES,DAY_CNT,MARKET_ISSUE,COUNTRY,CRNCY,COLLAI_TYP,AMT_ISSUED,
-AMT_OUTSTANDING,MIN_PIECE,MIN_INCREMENT,PAR_AMT,LEAD_MGR,EXCH_CODE,REDEMP_VAL,ANNOUNCE_DT,FIRST_SETTLE_DT,FIRST_CPN_DT,
-INT_ACC_DT,ISSUE_DT,ISSUE_PX,ID_EUROCLEAR,ID_XTRAKIER,ID_SEDOL1,ID_SEDOL2,ID_CEDEL,ID_WERIPAPIER,ID_ISIN,ID_DUTCH,ID_VALOREN,
-ID_FRENCH,ID_COMMON,ID_JAPAN,ID_BELGIUM,ID_DANISH,ID_AUnitedStateOfAmericaTRIAN,ID_LUXEMBOURG, ID_SWEDISH,ID_JAPAN_COMPANY,
-ID_SPAIN,ID_ITALY,ID_BB_COMPANY,ID_BB_SECURITY,ID_CUnitedStateOfAmericaIP,NXT_canadaLL_DT,NXT_canadaLL_PX,NXT_PAR_canadaLL_DT,
-NXT_PUT_DT,NXT_PUT_PX,NXT_PAR_PUT_DT,NXT_CPN_DT,NXT_SINK_DT,NXT_RE_DT,RIG_JCR,REFIX_FREQ,NXT_REFIX_DT,RESET_IDX,PFD_DVD_PAY_DT,PFD_EX_DVD_DT,
-PFD_RST_DVD,CV_COMMON_TICKER,CV_COMMON_TICKER_EXCH,CV_CNVS_RAIIO,CV_UNTIL,CV_CNVS_FEXCH_RI,CV_PROV_PX,canadaLLABLE ,SINKABLE,PUTABLE,ID_BB_PARENT_CO,
-PARENT_COMP_NAME ,PARENT_COMP_TICKER,CNTRY_OF_ INCORPORATION,BASIC_SPREAD,INDUnitedStateOfAmericaTRY_SECTOR,INDUnitedStateOfAmericaTRY_GROUP,
-INDUnitedStateOfAmericaTRY_SUBGROUP,COUNTRY_GUARANTOR,CNTRY_OF_DOMICILE,SECURITY_DES,144A_FLAG,FLT_BENCH_MULTIPLIER,SECURITY_TYP,CV_START_DT,
-GUARANTOR_NAME,PREV_CPN_DT,NXT_SINK_AMT,canadaLL_DISCRETE,PUT_DISCRETE,ID_BB_UNIQUE,LONG_COMP_NAME ,REDEMP_CRNCY,CPN_CRNCY,DTC_ELIGIBLE,STRUCTURED_NOTE,
-PCT_PAR_QUOTED,PCS_QUOTE_TYP,IS_UNIT_TRADED, IS_REVERSE_CONVERTIBLE,TRADE_CRNCY,BEARER,REGISTERED,canadaLLED ,canadaLLED_DT, ISSUER,canadaLL_FEAIURE,
-PUT_FEATURE,PENULTIMATE_CPN_DT,FLT_CPN_CONVENTION,CUR_CPN,FLOAIER,TRADE_STAIUnitedStateOfAmerica,CDR_COUNTRY_CODE,CDR_SETTLE_CODE,
-SEASONING_STAIUnitedStateOfAmerica,FINAL_MATURITY,PRVT_PLACE,canadaLC_TYP,REMOVAL_REASON,IS_PERPETUAL,IS_REGS,canadaLLED_PX,DEFAULTED,GILTS_EX_DVD_DT,
-MOST_RECENT_REPORIED_FACTOR,NXT_FACTOR_DT,OID_BOND,DELIVERY_TYP,ID_SEDOL3,ID_SEDOL4,ID_SEDOL5,SEDOL1_COUNTRY_ISO,SEDOL2_COUNTRY_ISO,SEDOL3_COUNTRY_ISO,
-SEDOL4_COUNTRY_ISO,SEDOL5_COUNTR Y_ISO,ID_MIC1,ID_MIC2,ID_MIC3,ID_MIC4,ID_MIC5,CV_SH_PAR,DUAL_CRNCY,EXTENDIBLE,EXCHANGEABLE,IS_SOFT_canadaLL,
-CV_MANDAIORY_CNVS,EU_SAVINGS_DIRECTIVE,ID_CUnitedStateOfAmericaIP_REAL,INDUnitedStateOfAmericaTRY_SUBG ROUP_NUM,SECURITY_TYP2,
-LAST_REFIX_DT,ISO_COUNTRY_GUARANTOR,DTC_REGISTERED,canadaLL_PARTIAL,CV_CNVS_PX,IS_CURRENT_GOVT,FIRST_canadaLL_DT_ISSUANCE,UNDL_ID_BB_UNIQUE,EST_CPN_FLAG,
-ID_BB_GUARANTOR, IS_DAY_PAYER,STEPUP_CPN,STEPUP_DT,canadaLC_MATURITY,ID_EXCH_SYMBOL ,CREDIT_ENHANCEMENTS,INSURANCE _STATUnitedStateOfAmerica,
-JUNIOR,SENIOR,FLT_PAY_DAY,FLT_DAYS_PRIOR,INFLAIION_LINKED_INDIcanadaIOR,DAYS_IO_SETTLE,TYPE_OF_BOND,REFERENCE_INDEX,BASE_CPI,CFI_CODE,CPN_FREQ_YLD_CNV,
-DAY_PAYER_FREQ,EX_DIV_DAYS,EX_DIV_canadaLENDAR,CONTINGENT_CONVERSION,CONTRIB_DAIA_INDIcanadaIOR,SECURITY_FACTORABLE,ID_BB_GLOBAL,SINKING__FACTOR,
-SINK_SCHEDULE_AMI_TYP,INDUnitedStateOfAmericaTRY_GROUP_NUM,INDUnitedStateOfAmericaTRY_SECTOR_NUM,ISSUERS_STOCK,INFLAIION_LAG,
-MAKE_WHOLE_canadaLL_SPR EAD,ISSUER_BULK,ID_BB_SEC_NUM_DES,FEED_SOURCE,ID_BB_GLOBAL_COMPANY,ID_BB_GLOBAL_COMPANY_NAME,
+select cpn,NAME,crncy,bearer,junior,senior,series,ticker, ISSUER,country,cpn_typ,cur_cpn,day_cnt,floaier,id_isin,id_mic1,id_mic2,id_mic3,id_mic4,
+id_mic5,is_regs,mty_typ,par_amt,putable,rig_jcr,base_cpi,cfi_code,cpn_freq,cv_until,id_cedel,id_dutch,id_italy,id_japan,id_spain,
+issue_dt,issue_px,lead_mgr,maturity,oid_bond,sinkable,144A_FLAG,cpn_crncy,cv_sh_par,defaulted,exch_code,id_common,id_danish,id_french,
+id_sedol1,id_sedol2,id_sedol3,id_sedol4,id_sedol5,min_piece,nxt_re_dt,reset_idx,stepup_dt,amt_issued,collai_typ,cv_cnvs_px,cv_prov_px,
+dual_crncy,extendible,id_belgium,int_acc_dt,nxt_cpn_dt,nxt_put_dt,nxt_put_px,prvt_place,
+redemp_val,refix_freq,registered,short_name,stepup_cpn, ID_SWEDISH,announce_dt,cv_start_dt,ex_div_days,flt_pay_day,ID_VALOREN,
+id_xtrakier,issuer_bulk,nxt_sink_dt,pfd_rst_dvd,prev_cpn_dt,put_feature,trade_crncy,canadaLLED ,basic_spread,delivery_typ,dtc_eligible,
+est_cpn_flag,exchangeable,first_cpn_dt,id_bb_global,id_bb_unique,id_euroclear,is_perpetual,market_issue,nxt_refix_dt,nxt_sink_amt,put_discrete,
+redemp_crncy,security_des,security_typ,type_of_bond,calc_typ_des,canadalc_typ,  FEED_SOURCE, IS_DAY_PAYER,cv_cnvs_raiio,id_bb_company,id_luxembourg,
+id_weripapier,inflaiion_lag,issuers_stock,last_refix_dt,min_increment,nxt_factor_dt,pcs_quote_typ,pfd_ex_dvd_dt,security_typ2,canadaLLABLE,
+canadalled_dt,canadalled_px,days_io_settle,day_payer_freq,dtc_registered,final_maturity,flt_days_prior,guarantor_name,id_bb_security,is_unit_traded,
+nxt_par_put_dt,pct_par_quoted,pfd_dvd_pay_dt,removal_reason,amt_outstanding,bbg_unique_code,
+cdr_settle_code,first_settle_dt,gilts_ex_dvd_dt,id_bb_guarantor,id_bb_parent_co,ID_EXCH_SYMBOL ,is_current_govt,LONG_COMP_NAME ,nxt_canadall_dt,nxt_canadall_px,reference_index,sinking__factor,structured_note,cdr_country_code,cpn_freq_yld_cnv,cv_cnvs_fexch_ri,cv_common_ticker,id_japan_company,is_soft_canadall,canadall_feaiure,canadall_partial,cntry_of_domicile,country_guarantor,cv_mandaiory_cnvs,id_bb_sec_num_des,market_sector_des,PARENT_COMP_NAME ,undl_id_bb_unique,canadalc_maturity,canadall_discrete,flt_cpn_convention,parent_comp_ticker,penultimate_cpn_dt,sedol1_country_iso,sedol2_country_iso,sedol3_country_iso,sedol4_country_iso,credit_enhancements,ex_div_canadalendar,nxt_par_canadall_dt,security_factorable,SEDOL5_COUNTR Y_ISO,eu_savings_directive,flt_bench_multiplier,id_bb_global_company,contingent_conversion,cv_common_ticker_exch,iso_country_guarantor,sink_schedule_ami_typ, IS_REVERSE_CONVERTIBLE,CNTRY_OF_ INCORPORATION,id_bb_global_company_name,contrib_daia_indicanadaior,first_canadall_dt_issuance,MAKE_WHOLE_canadaLL_SPR EAD,most_recent_reporied_factor,ID_CUnited State Of AmericaIP,inflaiion_linked_indicanadaior,ID_AUnited State Of AmericaTRIAN,TRADE_STAIUnited State Of America,ID_CUnited State Of AmericaIP_REAL,INDUnited State Of AmericaTRY_GROUP,INDUnited State Of AmericaTRY_SECTOR,ISSUER_INDUnited State Of AmericaTRY,SEASONING_STAIUnited State Of America,INDUnited State Of AmericaTRY_SUBGROUP,INSURANCE _STATUnited State Of America,INDUnited State Of AmericaTRY_GROUP_NUM,INDUnited State Of AmericaTRY_SECTOR_NUM,INDUnited State Of AmericaTRY_SUBG ROUP_NUM,_airbyte_ab_id,_airbyte_emitted_at,_airbyte_normalized_at,_airbyte_finalop_hashid,
 case
-when (PCS_QUOTE_TYP=2 and ISSUE_PX is not null) then 100-ISSUE_PX
-else ISSUE_PX
+when (issue_px is not null and cast(pcs_quote_typ as int)==2) then 100-issue_px
+else issue_px
 end as OfferPrice,
 case
-when (BEARER='Y' and REGISTERED='Y') then 'BEARREG'
-when (BEARER='Y' and (REGISTERED='N' or REGISTERED is null)) then 'BEARER'
-when ((BEARER='N' or BEARER is null) and REGISTERED='Y') then 'REGSTRD'
+when (bearer=='Y' and registered=='Y') then 'BEARREG'
+when (bearer=='Y' and (registered=='N' or registered is null)) then 'BEARER'
+when ((bearer=='N' or bearer is null) and registered=='Y') then 'REGSTRD'
 else 'UNKNOWN'
 end as SecurityFormType,
 case 
-when TICKER='MBONO' then MIN_PIECE/100
-when TICKER in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then MIN_PIECE/1000
-when PAR_AMT is not null then MIN_PIECE/PAR_AMT
-else MIN_PIECE
+when ticker=='MBONO' then min_piece/100
+when ticker in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then min_piece/1000
+when par_amt is not null then min_piece/par_amt
+else min_piece
 end as minimumTradeSize,
 case 
-when TICKER='MBONO' then MIN_INCREMENT/100
-when TICKER in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then MIN_INCREMENT/1000
-when PAR_AMT is not null then MIN_INCREMENT/PAR_AMT
-else MIN_INCREMENT
+when ticker=='MBONO' then min_increment/100
+when ticker in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then min_increment/1000
+when par_amt is not null then min_increment/par_amt
+else min_increment
 end as RoundLotSize,
 case
-when PAR_AMT is not null then PAR_AMT
-when PCT_PAR_QUOTED='N' then 1
-when PCT_PAR_QUOTED='Y' then 100
+when par_amt is not null then par_amt
+when pct_par_quoted=='N' then 1
+when pct_par_quoted=='Y' then 100
 end as NominalValueOfUnit,
 case
-when CALLED='Y' then 'FULLY'
+when called=='Y' then 'FULLY'
 else 'INCOMPLETE'
 end as calleventtype
 from {{ref('stg_hamilton')}}
