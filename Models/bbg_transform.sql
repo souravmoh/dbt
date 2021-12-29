@@ -21,7 +21,34 @@ CONTINGENT_CONVERSION,CONTRIB_DAIA_INDICAIOR,SECURITY_FACTORABLE,ID_BB_GLOBAL,SI
 INDUSTRY_SECTOR_NUM,ISSUERS_STOCK,INFLAIION_LAG,ISSUER_BULK,ID_BB_SEC_NUM_DES,ID_BB_GLOBAL_COMPANY,
 ID_BB_GLOBAL_COMPANY_NAME,
 case
-when (PCS_QUOTE_TYP=2 and ISSUE_PX is not null) then 100-cast(ISSUE_PX as numeric)
-else cast(ISSUE_PX as numeric)
-end as OfferPrice
+when (ISSUE_PX is not null and cast(PCS_QUOTE_TYP as int)==2) then 100-ISSUE_PX
+else ISSUE_PX
+end as OfferPrice,
+case
+when (BEARER=='Y' and REGISTERED=='Y') then 'BEARREG'
+when (BEARER=='Y' and (REGISTERED=='N' or REGISTERED is null)) then 'BEARER'
+when ((BEARER=='N' or BEARER is null) and REGISTERED=='Y') then 'REGSTRD'
+else 'UNKNOWN'
+end as SecurityFormType,
+case 
+when TICKER=='MBONO' then MIN_PIECE/100
+when TICKER in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then MIN_PIECE/1000
+when PAR_AMT is not null then MIN_PIECE/PAR_AMT
+else MIN_PIECE
+end as minimumTradeSize,
+case 
+when TICKER=='MBONO' then MIN_INCREMENT/100
+when TICKER in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then MIN_INCREMENT/1000
+when PAR_AMT is not null then MIN_INCREMENT/PAR_AMT
+else MIN_INCREMENT
+end as RoundLotSize,
+case
+when PAR_AMT is not null then PAR_AMT
+when PCT_PAR_QUOTED=='N' then 1
+when PCT_PAR_QUOTED=='Y' then 100
+end as NominalValueOfUnit,
+case
+when CALLED=='Y' then 'FULLY'
+else 'INCOMPLETE'
+end as calleventtype
 from {{ref('stg_bbg')}}
