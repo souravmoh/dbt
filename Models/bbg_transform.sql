@@ -51,4 +51,4 @@ case
 when "CALLED "='Y' then 'FULLY'
 else 'INCOMPLETE'
 end as calleventtype
-from {{ref('stg_bbg')}}
+from destination.public.final_bo
