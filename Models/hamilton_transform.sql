@@ -50,4 +50,4 @@ case
 when "canadaLLED "='Y' then 'FULLY'
 else 'INCOMPLETE'
 end as calleventtype
-from {{ref('stg_hamilton')}}
+from destination.public.finalop
