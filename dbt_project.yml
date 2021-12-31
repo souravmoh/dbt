@@ -1,7 +1,7 @@
 
 name: 'transform'
 version: '0.1'
-profile: 'SampleDB'
+profile: 'spark'
 config-version: 2
 
 source-paths: ["models"]
