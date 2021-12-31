@@ -4,7 +4,7 @@ version: '0.1'
 profile: 'SampleDB'
 config-version: 2
 
-source-paths: ["Models"]
+source-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
@@ -17,7 +17,7 @@ clean-targets:
     - "logs"
 
 models:
-  dbt:
-      materialized: table
+  transform:
+      +materialized: table
       staging:
         materialized: view
