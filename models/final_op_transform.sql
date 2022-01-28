@@ -1,10 +1,10 @@
-{% macro op_1(col1,col2) %}
+{% macro finalop_transformation_1(col1,col2) %}
     (case
     when {{col1 }} is not null and {{col2}}=2 then 100-{{col1}}
     else {{col1}}
     end)
 {% endmacro %}
-{% macro op_2(col3,col4) %}
+{% macro finalop_transformation_2(col3,col4) %}
     (case
     when {{col3}}='Y' and {{col4}}='Y' then 'BEARREG'
     when {{col3}}='Y' and ({{col4}}='N' or {{col4}} is null) then 'BEARER'
@@ -12,7 +12,7 @@
     else 'UNKNOWN'
     end)
 {% endmacro %}
-{% macro op_3_and_4(col5,col6,col7) %}
+{% macro finalop_transformation_3_and_4(col5,col6,col7) %}
     (case
     when {{col5}}='MBONO' then {{col7}}/100
     when {{col5}} in ('BLFT','BLTN','BNTNB','BNTNC','BNTNF') then {{col7}}/1000
@@ -20,23 +20,23 @@
     else {{col7}}
     end)
 {% endmacro %}
-{% macro op_5(col8,col9) %}
+{% macro finalop_transformation_5(col8,col9) %}
 (case
  when {{col8 }} is not null then {{col8}}
  when {{col9}}='N' then 1 
  when {{col9}}='Y' then 100
  end)
 {% endmacro %}
-{% macro op_6(col10) %}
+{% macro finalop_transformation_6(col10) %}
 (case
  when {{col10}}='Y' then 'FULLY'
  else 'INCOMPLETE'
  end)
 {% endmacro %}
-select *,{{op_1('issue_px','pcs_quote_typ')}} as OfferPrice,
-{{op_2('bearer','registered')}} as SecurityFormType,
-{{op_3_and_4('ticker','par_amt','min_piece')}} as minimumTradeSize,
-{{op_3_and_4('ticker','par_amt','min_increment')}} as RoundLotSize,
-{{op_5('par_amt','pct_par_quoted')}} as NominalValueOfUnit,
-{{op_6('"canadaLLED "')}} as calleventtype
+select *,{{finalop_transformation_1('issue_px','pcs_quote_typ')}} as OfferPrice,
+{{finalop_transformation_2('bearer','registered')}} as SecurityFormType,
+{{finalop_transformation_3_and_4('ticker','par_amt','min_piece')}} as minimumTradeSize,
+{{finalop_transformation_3_and_4('ticker','par_amt','min_increment')}} as RoundLotSize,
+{{finalop_transformation_5('par_amt','pct_par_quoted')}} as NominalValueOfUnit,
+{{finalop_transformation_6('"canadaLLED "')}} as calleventtype
 from destination.public.finalop
